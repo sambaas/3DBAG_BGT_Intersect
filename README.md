@@ -13,6 +13,10 @@ scipy
 shapely
 trimesh
 vedo
+owslib
+numba
+pandas
+networkx
 ```
 
 ## Method
