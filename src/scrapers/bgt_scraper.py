@@ -33,6 +33,9 @@ def scrape_amsterdam_bgt(layer_name, bbox=None):
     params = params + 'OUTPUTFORMAT=geojson'
 
     response = requests.get(WFS_URL + params)
+    with open('C:/Projects/GemeenteAmsterdam/3DBAG_BGT_Intersect/output/3dbag/'+layer_name+'_BGT_geojson_data.json', 'w') as outfile:
+        outfile.write(response.text)
+
     try:
         return response.json()
     except ValueError:
@@ -90,6 +93,10 @@ def get_bgt_by_tile_codes(tile_codes, padding=0.0):
 
     # Scrape data from the Amsterdam WFS, this will return a json response.
     json_response = scrape_amsterdam_bgt('BGT_PND_pand', bbox=tile_bbox)
+
+    # Write to local file to inspect
+    #with open('json_data.json', 'w') as outfile:
+    #    outfile.write(json_string)
 
     # Parse the downloaded json response.
     parsed_content = parse_polygons(json_response)

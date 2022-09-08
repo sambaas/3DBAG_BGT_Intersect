@@ -18,7 +18,7 @@ skip_existing = True
 version_substring = "v210908_fd2cee53"
 download_path = "https://data.3dbag.nl/cityjson/{}/3dbag_{}_{}.json"
 local_filename = "{}_{}_bbox_{}_{}_{}_{}.json"
-local_path = "C:/Users/boble/Documents/AI-year2/Thesis/data/"
+local_path = "C:/Projects/GemeenteAmsterdam/3DBAG_BGT_Intersect/output/3dbag/"
 
 
 def download_tile(url, file_name):

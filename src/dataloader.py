@@ -38,7 +38,7 @@ def get_item(id, dataset_root, city_model=None, city_map=None, city_outline=None
     assert city_map, 'city_map required for Amsterdam dataset'
     assert city_outline, 'city_outline required for Amsterdam dataset'
 
-    pcd_aer_dir = 'D:/datasets/Amsterdam/aerial/'
+    pcd_aer_dir = 'C:/Projects/GemeenteAmsterdam/3DBAG_BGT_Intersect/output/per_building_pointclouds/'
 
     # Load building data
     building = city_model.get_cityobjects(type=['building', 'buildingpart'])[f'NL.IMBAG.Pand.{id}-0']
